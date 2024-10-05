@@ -33,7 +33,7 @@ body {
 }
 
 .imagen-portada {
-    width: 40vw;
+    width: 40%;
     max-width: 40%;
     height: auto;
     border-radius: 10%;
@@ -45,8 +45,8 @@ body {
 }
 
 .texto {
-    width: 50vw;
-    max-width: 40%;
+    width: 55%;
+    max-width: 55%;
     height: auto;
     transition: transform 0.5s;
     padding-left: 20px;
@@ -56,7 +56,6 @@ body {
     padding: 40px;
     margin: 5vw;
     box-sizing: border-box;
-    max-width: 100vw;
     word-wrap: break-word;
 }
 
@@ -141,18 +140,18 @@ body {
 
 /* Estilos para los enlaces */
 a {
-    background-color: #e0e0e0; /* Fondo del enlace */
+    background-color: #2f7c42; /* Fondo del enlace */
     border: 2px solid #000; /* Borde del enlace */
     padding: 5px 10px; /* Espaciado interno */
     text-decoration: none; /* Eliminar subrayado */
-    color: #000; /* Color de texto */
+    color: #f1f1f1; /* Color de texto */
     display: inline-block;
     margin: 5px 0;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 a:hover {
-    background-color: #c0c0c0; /* Fondo al hacer hover */
+    background-color: #80e026; /* Fondo al hacer hover */
     transform: scale(1.05); /* Ligeramente más grande */
 }
 
