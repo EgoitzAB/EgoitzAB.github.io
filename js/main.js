@@ -11,3 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
         texto.classList.add('visible');
     }
 });
+
+const track = document.querySelector('.carousel-track');
+
+track.addEventListener('mouseover', () => {
+    track.style.animationPlayState = 'paused';
+});
+
+track.addEventListener('mouseout', () => {
+    track.style.animationPlayState = 'running';
+});

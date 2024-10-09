@@ -16,7 +16,7 @@ body {
   
 .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
@@ -220,5 +220,70 @@ a:hover {
         padding: 10px; /* Ajustar padding para evitar desbordamiento */
         box-sizing: border-box; /* Asegura que padding no afecte el ancho */
         margin: 20px 20px;
+    }
+}
+
+/* Estilos para el contenedor del carrusel y el título */
+.carousel-container {
+    position: relative; /* Necesario para posicionar el título dentro del contenedor */
+    width: 100%;
+    padding: 20px 0;
+    background-color: white;
+    margin-bottom: 30px; /* Espacio entre el título y otros elementos */
+}
+
+.carousel-title {
+    position: absolute;
+    top: -40px; /* Ajusta según la distancia que quieras del carrusel */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    padding: 20px 0;
+    overflow-x: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-logo {
+    width: 80px; /* O ajusta según necesidad */
+    height: auto;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-logo {
+        width: 60px;
+        margin: 0 10px;
+    }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 920px) {
+    .carousel-title {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
     }
 }
