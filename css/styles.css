@@ -12,9 +12,9 @@ body {
 .encabezado {
       font-size: 5rem;
       text-align: center;
-      background-color: coral;
-      text-decoration-color: blue;
-      color: aqua;
+      background-color: rgb(98, 80, 255);
+      text-decoration-color: rgb(100, 206, 51);
+      color: rgb(255, 255, 255);
   }
   
 .container {
@@ -27,6 +27,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    background-color: burlywood;
 }
 
 .container-certificaciones {
@@ -35,6 +36,9 @@ body {
     text-align: justify;
     margin: 10px auto;
     padding: 20px;
+    background-image: url('robotpe.jpeg');
+    background-repeat: repeat;
+    padding: 10px;
 }
 
 .proyectos-general {
@@ -96,9 +100,10 @@ body {
 .proyecto {
     perspective: 1000px; /* Establece la perspectiva 3D */
     width: 100%; /* Ajusta según sea necesario */
-    height: 200px; /* Ajusta según el tamaño de las imágenes */
+    height: auto; /* Ajusta según el tamaño de las imágenes */
     margin-bottom: 5vh; /* Espaciado entre proyectos */
     margin-top: 5vh;
+    position: relative;
 }
 
 .proyecto-inner {
@@ -116,8 +121,6 @@ body {
     height: 100%;
     backface-visibility: hidden; /* Oculta la parte trasera cuando está girada */
     border-radius: 10%; /* Bordes redondeados */
-    margin-top: 5vh;
-    margin-bottom: 5vh;
 }
 
 .proyecto-front {
@@ -148,7 +151,7 @@ body {
 a {
     background-color: #2f7c42; /* Fondo del enlace */
     border: 2px solid #000; /* Borde del enlace */
-    border-radius: 10%;
+    border-radius: 20%;
     padding: 5px 10px; /* Espaciado interno */
     text-decoration: none; /* Eliminar subrayado */
     color: #f1f1f1; /* Color de texto */
@@ -249,6 +252,10 @@ a:hover {
     color: #333;
     font-weight: 700;
     text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: aliceblue;
+
 }
 
 .carousel {
@@ -264,6 +271,7 @@ a:hover {
     display: flex;
     width: 100%;
     animation: scroll 20s linear infinite;
+    white-space: nowrap;
 }
 
 .carousel-logo {
