@@ -230,6 +230,7 @@ a:hover {
     padding: 20px 0;
     background-color: white;
     margin-bottom: 30px; /* Espacio entre el título y otros elementos */
+    margin-top: 40px;
 }
 
 .carousel-title {
