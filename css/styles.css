@@ -3,6 +3,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    overflow: hidden;
   }
   
 body {
@@ -18,7 +19,16 @@ body {
       background-color: rgb(98, 80, 255);
       color: rgb(255, 255, 255);
   }
-  
+
+.certificaciones {
+    width: 48%;
+    padding: 20px;
+    border: 2px solid blue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('/images/robotpe.jpeg');
+    background-repeat: repeat;
+}
+
 .container {
     display: flex;
     flex-wrap: nowrap;
@@ -38,9 +48,7 @@ body {
     text-align: justify;
     margin: 10px auto;
     padding: 20px;
-    background-image: url('/images/robotpe.jpeg');
-    background-repeat: repeat;
-    padding: 10px;
+    overflow: hidden;
 }
 
 .proyectos-general {
@@ -74,15 +82,6 @@ body {
     margin: 5vw;
     box-sizing: border-box;
     word-wrap: break-word;
-}
-
-
-
-.certificaciones {
-    width: 48%;
-    padding: 20px;
-    border: 2px solid blue;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container-proyectos {
@@ -178,6 +177,7 @@ a:hover {
     .container-certificaciones {
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
     }
 
     .texto {
@@ -300,4 +300,63 @@ a:hover {
     .carousel-title {
         font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
     }
+}
+
+/* Parte de los recursos de interés */
+
+.recursos {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.recursos h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.recursos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recursos li {
+    margin-bottom: 5px;
+}
+
+.recursos a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.recursos a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-footer, .right-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
 }
