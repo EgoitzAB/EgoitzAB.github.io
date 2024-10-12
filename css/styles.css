@@ -12,6 +12,9 @@ body {
 .encabezado {
       font-size: 5rem;
       text-align: center;
+      background-color: coral;
+      text-decoration-color: blue;
+      color: aqua;
   }
   
 .container {
@@ -24,6 +27,14 @@ body {
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+}
+
+.container-certificaciones {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    margin: 10px auto;
+    padding: 20px;
 }
 
 .proyectos-general {
@@ -59,12 +70,7 @@ body {
     word-wrap: break-word;
 }
 
-.container-certificaciones {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px auto;
-    padding: 20px;
-}
+
 
 .certificaciones {
     width: 48%;
@@ -142,6 +148,7 @@ body {
 a {
     background-color: #2f7c42; /* Fondo del enlace */
     border: 2px solid #000; /* Borde del enlace */
+    border-radius: 10%;
     padding: 5px 10px; /* Espaciado interno */
     text-decoration: none; /* Eliminar subrayado */
     color: #f1f1f1; /* Color de texto */
