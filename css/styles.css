@@ -38,7 +38,7 @@ body {
     text-align: justify;
     margin: 10px auto;
     padding: 20px;
-    background-image: url('robotpe.jpeg');
+    background-image: url('/images/robotpe.jpeg');
     background-repeat: repeat;
     padding: 10px;
 }
