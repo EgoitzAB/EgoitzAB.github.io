@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .proyectos-general {
-    font-size: 4rem;
+    font-size: 2rem;
     text-align: center;
     margin-top: 15vh;
 }
@@ -90,35 +90,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container-proyectos {
-    width: 48%;
-    padding: 20px;
-    margin-top: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Espaciado alrededor de la sección de proyectos */
 }
 
 .miniaturas {
-    display: flex;
-    flex-wrap:nowrap;
-    justify-content: space-around; /* Espacio entre los proyectos */
-    gap: 30px; /* Espacio entre miniaturas */
+    display: grid; /* Usa grid para mostrar los proyectos */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Múltiples columnas */
+    gap: 20px; /* Espaciado entre los proyectos */
 }
 
 .proyecto {
-    perspective: 1000px; /* Establece la perspectiva 3D */
-    width: 100%; /* Ajusta según sea necesario */
-    height: auto; /* Ajusta según el tamaño de las imágenes */
-    margin-bottom: 5vh; /* Espaciado entre proyectos */
-    margin-top: 5vh;
-    position: relative;
+    background-color: #f0f0f0; /* Fondo para los proyectos */
+    border: 1px solid #ccc; /* Borde para los proyectos */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que no se desborde */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para un mejor efecto visual */
+    transition: transform 0.3s; /* Efecto de transición al hacer hover */
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto:hover {
+    transform: scale(1.05); /* Escala ligeramente al hacer hover */
 }
 
 .proyecto-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d; /* Permite el efecto 3D */
-    transition: transform 0.6s; /* Suaviza la animación */
+    position: relative; /* Para el efecto de volteo */
+    height: 200px; /* Altura fija para que todos los proyectos tengan el mismo tamaño */
 }
 
 .proyecto-front,
@@ -126,32 +124,49 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Oculta la parte trasera cuando está girada */
-    border-radius: 10%; /* Bordes redondeados */
+    backface-visibility: hidden; /* Oculta la parte de atrás */
+    transition: transform 0.6s; /* Suaviza la transición */
 }
 
 .proyecto-front {
-    z-index: 2; /* Mantiene la parte frontal encima */
+    z-index: 2; /* Se muestra en el frente */
 }
 
 .proyecto-back {
-    transform: rotateY(180deg); /* Rota la parte trasera 180 grados */
+    transform: rotateY(180deg); /* Rota la parte de atrás */
 }
 
-.proyecto-inner:hover {
-    transform: rotateY(180deg); /* Gira el contenedor al hacer hover */
+/* Efecto de hover para voltear */
+.proyecto:hover .proyecto-front {
+    transform: rotateY(180deg); /* Rota la parte delantera */
+}
+
+.proyecto:hover .proyecto-back {
+    transform: rotateY(0deg); /* Rota la parte trasera */
 }
 
 .miniatura {
-    width: auto; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
-    height: 15vh; /* Mantiene la relación de aspecto */
-    border-radius: 10%; /* Bordes redondeados */
-    object-fit: cover;
+    width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
 }
 
-.tecnologias {
-    margin-top: 20px;
-    margin-bottom: 10px;
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .miniaturas {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .proyecto-inner {
+        height: auto; /* Permitir que el contenedor se ajuste a la altura de las imágenes */
+    }
+
+    .proyecto {
+        margin: 10px 0; /* Espacio entre proyectos */
+    }
+
+    .descripcion {
+        padding: 10px; /* Espaciado interno para la descripción */
+    }
 }
 
 /* Estilos para los enlaces */
@@ -233,12 +248,6 @@ a:hover {
         margin-bottom: 40px;
     }
 
-    .descripcion {
-        width: 100%; /* Ocupa el 100% del contenedor */
-        padding: 10px; /* Ajustar padding para evitar desbordamiento */
-        box-sizing: border-box; /* Asegura que padding no afecte el ancho */
-        margin: 20px 20px;
-    }
 }
 
 /* Estilos para el contenedor del carrusel y el título */
@@ -344,11 +353,14 @@ a:hover {
     background-color: #333;
     color: #fff;
     padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .container-1 {
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .left-footer, .right-footer {
@@ -364,4 +376,15 @@ a:hover {
 
 .footer-link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .container-1 {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .left-footer,
+    .right-footer {
+        margin: 10px 0; /* Espaciado vertical entre secciones */
+    }
 }
