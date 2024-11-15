@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     border: 2px solid blue;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url('/images/robotpe.jpeg');
+    background-image: url('/images/open-source-1024x585.jpeg');
     background-repeat: repeat;
 }
 
@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
     text-align: center;
     margin-top: 15vh;
+}
+
+.subtitulo {
+    color: white;
 }
 
 .imagen-portada {
@@ -157,6 +161,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .texto-certificaciones {
     background-color: #42c262;
+    border: 2px solid #000; /* Borde del enlace */
+    border-radius: 20%;
+    padding: 10px 10px;
+    color: white;    
 }
 
 /* Ajustes para pantallas pequeñas */
@@ -173,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Estilos para los enlaces */
 a {
-    background-color: #2f7c42; /* Fondo del enlace */
+    background-color: #42c262; /* Fondo del enlace */
     border: 2px solid #000; /* Borde del enlace */
     border-radius: 20%;
     padding: 5px 10px; /* Espaciado interno */
